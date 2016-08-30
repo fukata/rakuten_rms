@@ -9,7 +9,21 @@ module RakutenRms
 
       def get_order(options = {})
         response = client.call(:get_order, { message: { arg0: authentication_hash }.merge(options) })
+        Response.new(response.http)
+      end
 
+      def update_order(options = {})
+        response = client.call(:update_order, { message: { arg0: authentication_hash }.merge(options) })
+        Response.new(response.http)
+      end
+
+      def get_request_id(options = {})
+        response = client.call(:get_request_id, { message: { arg0: authentication_hash }.merge(options) })
+        Response.new(response.http)
+      end
+
+      def get_result(options = {})
+        response = client.call(:get_result, { message: { arg0: authentication_hash }.merge(options) })
         Response.new(response.http)
       end
 
