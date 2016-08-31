@@ -28,7 +28,7 @@ module RakutenRms
       end
 
       def get_rccs_request_id(options = {})
-        response = client.call(:get_rccs_request_id, { message: { arg0: authentication_hash }.merge(options) })
+        response = client.call(:get_rccs_request_id, { message: { userAuthModel: authentication_hash }.merge(options) })
         Response.new(response.http)
       end
 
