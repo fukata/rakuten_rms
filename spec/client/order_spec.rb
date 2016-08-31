@@ -7,7 +7,27 @@ describe RakutenRms::Client::Order, :vcr do
   describe "#get_order" do
     it "returns RakutenRms::Resposne instance" do
       response = client.get_order(arg1: { orderNumber: ["orderNumber"]})
+      expect(response).to be_a RakutenRms::Response
+    end
+  end
 
+  describe "#update_order" do
+    it "returns RakutenRms::Resposne instance" do
+      response = client.update_order(arg1: { orderNumber: ["orderNumber"]})
+      expect(response).to be_a RakutenRms::Response
+    end
+  end
+
+  describe "#get_request_id" do
+    it "returns RakutenRms::Resposne instance" do
+      response = client.get_request_id(arg1: {})
+      expect(response).to be_a RakutenRms::Response
+    end
+  end
+
+  describe "#get_result" do
+    it "returns RakutenRms::Resposne instance" do
+      response = client.get_result(arg1: { requestId: ["requestId", "requestId"]})
       expect(response).to be_a RakutenRms::Response
     end
   end
