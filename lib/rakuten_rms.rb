@@ -1,3 +1,4 @@
+require "rakuten_rms/client/payment"
 require "rakuten_rms/client/order"
 require "rakuten_rms/client/item"
 require "rakuten_rms/configuration"

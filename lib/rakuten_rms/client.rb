@@ -9,6 +9,10 @@ module RakutenRms
       @configuration = Configuration.new(options)
     end
 
+    def payment 
+      Client::Payment.new(@configuration)
+    end
+
     def order
       Client::Order.new(@configuration)
     end
