@@ -32,6 +32,11 @@ module RakutenRms
         Response.new(response.http)
       end
 
+      def get_rccs_result(options = {})
+        response = client.call(:get_rccs_result, { message: { arg0: authentication_hash }.merge(options) })
+        Response.new(response.http)
+      end
+
       def get_rccs_result_all(options = {})
         response = client.call(:get_rccs_result_all, { message: { arg0: authentication_hash }.merge(options) })
         Response.new(response.http)
